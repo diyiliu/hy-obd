@@ -1,0 +1,31 @@
+# WEB PROPERTIES
+server:
+  port: 9008
+  context-path: '/'
+
+# SPRING
+spring:
+  # DATASOURCE
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@192.168.1.156:1521/xgsid.xg156.com
+    username: OBD
+    password: OBD
+
+  jpa:
+    show-sql: false
+
+  # redis
+  redis:
+    database: 0
+    host: 192.168.1.156
+    port: 6379
+
+# 自定义配置
+obd:
+  host: 192.168.1.32:${server.port}
+  gw-port: 9000
+
+kafka:
+  broker-list: xg153:9092,xg154:9092,xg155:9092

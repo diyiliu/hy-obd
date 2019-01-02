@@ -1,0 +1,9 @@
+rootProject.name = 'hy-obd'
+include 'obd-gw'
+include 'obd-das'
+include 'obd-task'
+
+// 外部依赖
+includeFlat 'dyl-plugin'
+include 'obd-mr'
+
